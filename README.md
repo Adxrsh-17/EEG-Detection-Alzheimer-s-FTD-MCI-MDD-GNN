@@ -1,5 +1,26 @@
 # 🧠 Automated Multiclass Diagnosis of Neuropsychiatric Disorders from Resting-State EEG using GNNs
 
+
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![License](https://img.shields.io/github/license/Adxrsh-17/EEG-Detection-Alzheimer-s-FTD-MCI-MDD-GNN)](./LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Adxrsh-17/EEG-Detection-Alzheimer-s-FTD-MCI-MDD-GNN/actions)
+
+---
+
+## 📊 Project Workflow
+
+```mermaid
+flowchart TD
+    A[Phase 0: Data Ingestion & Unification ✅] --> B[Phase 1: Harmonization & Preprocessing ✅]
+    B --> C[Phase 2: Feature Engineering & Graph Construction ⏳]
+    C --> D[Phase 3: GNN Modeling & Training ⏳]
+    D --> E[Phase 4: Evaluation & Explainability ⏳]
+```
+
+---
+
+## 📌 Project Overview
+
 This project implements a **production-grade pipeline** for the automated diagnosis of four neuropsychiatric disorders:  
 
 - **Alzheimer’s Disease (AD)**  
