@@ -1,0 +1,37 @@
+# =======================================
+# Python Virtual Environment
+# =======================================
+venv/
+
+# =======================================
+# Data, Results, and Large Files
+# =======================================
+data/raw/
+data/processed/
+results/
+*.zip
+
+# =======================================
+# Generated Metadata & Logs
+# =======================================
+data/harmonized_metadata.csv
+data/preprocessed_metadata.csv
+data/validation_errors.csv
+data/master_metadata.csv
+
+# =======================================
+# Python & Notebook Cache
+# =======================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# =======================================
+# IDE / Editor Files
+# =======================================
+.vscode/
+.idea/
+*.swp
+*.swo
