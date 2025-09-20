@@ -14,10 +14,7 @@ results/
 # =======================================
 # Generated Metadata & Logs
 # =======================================
-data/harmonized_metadata.csv
-data/preprocessed_metadata.csv
-data/validation_errors.csv
-data/master_metadata.csv
+data/
 
 # =======================================
 # Python & Notebook Cache
