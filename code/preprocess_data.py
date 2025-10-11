@@ -18,9 +18,13 @@ BANDPASS_FREQ = (1.0, 45.0)
 NOTCH_FREQ = 50.0
 EPOCH_DURATION = 2.0
 EPOCH_OVERLAP = 0.0
+REJECT_CRITERIA = dict(eeg=100e-6)  # 100 µV
+
+# --- ICA Configuration (Best Practices for ICLabel) ---
 ICA_N_COMPONENTS = 15
 ICA_RANDOM_STATE = 42
-REJECT_CRITERIA = dict(eeg=100e-6)  # 100 µV
+ICA_METHOD = 'infomax'
+ICA_FIT_PARAMS = dict(extended=True)
 
 # --- Sanity Check Configuration ---
 SAVE_SANITY_CHECK_PLOTS = True
@@ -46,7 +50,8 @@ def preprocess_subject(file_path: Path) -> tuple[mne.Epochs | None, mne.preproce
         # 4. Fit ICA on continuous data
         ica = mne.preprocessing.ICA(
             n_components=ICA_N_COMPONENTS,
-            method='fastica',
+            method=ICA_METHOD,
+            fit_params=ICA_FIT_PARAMS,
             random_state=ICA_RANDOM_STATE
         )
         ica.fit(raw)
